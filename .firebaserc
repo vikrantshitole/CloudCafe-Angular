@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "demoproject-94ca9": {
+      "hosting": {
+        "CloudCafe": [
+          "demoproject-94ca9"
+        ]
+      }
+    }
+  }
+}

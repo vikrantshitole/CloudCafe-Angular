@@ -1,0 +1,28 @@
+<h1>Cloud Cafe</h1>
+
+<div class="content">
+  <form id="add-cafe-form" [formGroup]="CafeForm">
+    <input
+      type="text"
+      name="name"
+      placeholder="cafe name"
+      formControlName="name"
+    />
+    <input
+      type="text"
+      name="city"
+      placeholder="cafe city"
+      formControlName="city"
+    />
+    <button *ngIf="!update" (click)="AddCafe()">Add Cafe</button
+    ><button *ngIf="update" (click)="updateCafe()">Update Cafe</button>
+  </form>
+
+  <ul id="cafe-list" *ngFor="let item of Data">
+    <li (click)="onclick(item)">
+      <span>{{ item.name }}</span>
+      <span>{{ item.city }}</span>
+      <div (click)="delete(item.id)">x</div>
+    </li>
+  </ul>
+</div>
